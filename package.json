@@ -1,6 +1,6 @@
 {
   "name": "@digital-mineral/agent-guard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unified enterprise security, budget, MCP gateway, escrow, telemetry attestation, and Base L2 payment settlement SDK for autonomous AI agents.",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,7 +13,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "engines": {
     "node": ">=22.0.0"
