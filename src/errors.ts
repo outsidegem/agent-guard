@@ -1,0 +1,29 @@
+export enum AgentGuardErrorCode {
+  LICENSE_INVALID = 'LICENSE_INVALID',
+  LICENSE_EXPIRED = 'LICENSE_EXPIRED',
+  LICENSE_REVOKED = 'LICENSE_REVOKED',
+  LICENSE_VERIFICATION_FAILED = 'LICENSE_VERIFICATION_FAILED',
+  AGENT_QUOTA_EXCEEDED = 'AGENT_QUOTA_EXCEEDED',
+  INVALID_REQUEST = 'INVALID_REQUEST',
+  INVALID_CAPABILITY = 'INVALID_CAPABILITY',
+  ESCROW_APPROVAL_REQUIRED = 'ESCROW_APPROVAL_REQUIRED',
+  SSRF_OR_TARGET_BLOCKED = 'SSRF_OR_TARGET_BLOCKED',
+  BUDGET_EXCEEDED = 'BUDGET_EXCEEDED',
+  TOOL_EXECUTION_FAILED = 'TOOL_EXECUTION_FAILED',
+  RECEIPT_VERIFICATION_FAILED = 'RECEIPT_VERIFICATION_FAILED',
+  PAYMENT_VERIFICATION_FAILED = 'PAYMENT_VERIFICATION_FAILED',
+  SETTLEMENT_FAILED = 'SETTLEMENT_FAILED',
+  GUARD_CLOSED = 'GUARD_CLOSED'
+}
+
+export class AgentGuardError extends Error {
+  public readonly code: AgentGuardErrorCode;
+  public readonly details?: Record<string, unknown>;
+
+  constructor(code: AgentGuardErrorCode, message: string, details?: Record<string, unknown>) {
+    super(message);
+    this.name = 'AgentGuardError';
+    this.code = code;
+    this.details = details;
+  }
+}

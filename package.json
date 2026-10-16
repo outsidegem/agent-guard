@@ -1,0 +1,40 @@
+{
+  "name": "@digital-mineral/agent-guard",
+  "version": "1.0.0",
+  "description": "Unified enterprise security, budget, MCP gateway, escrow, telemetry attestation, and Base L2 payment settlement SDK for autonomous AI agents.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@digital-mineral/agent-escrow": "^0.1.2",
+    "@digital-mineral/agent-pay-handshake": "^1.0.2",
+    "@digital-mineral/burn-bouncer": "^0.1.2",
+    "@digital-mineral/mcp-bridge": "^2.0.2",
+    "@digital-mineral/telemetry-witness": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  },
+  "author": "Digital Mineral Solutions LLC",
+  "license": "MIT"
+}
